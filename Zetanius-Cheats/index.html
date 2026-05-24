@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zetanius Cheats</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a, #1a0033);
+            color: #e0e0e0;
+            min-height: 100vh;
+            overflow-x: hidden;
+            text-align: center;
+            position: relative;
+        }
+
+        /* PARTÍCULAS */
+        .particles {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(192, 132, 252, 0.8);
+            border-radius: 50%;
+            box-shadow: 0 0 12px #c084fc;
+            animation: floatParticle linear infinite;
+        }
+
+        @keyframes floatParticle {
+            0% { transform: translateY(100vh) scale(0.6); opacity: 0; }
+            20% { opacity: 0.9; }
+            80% { opacity: 0.9; }
+            100% { transform: translateY(-150px) scale(1.4); opacity: 0; }
+        }
+
+        .hero {
+            position: relative;
+            z-index: 2;
+            padding: 180px 20px 80px;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #ffffff, #c084fc);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 50px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            padding: 18px 55px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.4s;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, #8b00ff, #ff00cc);
+            box-shadow: 0 10px 30px rgba(139, 0, 255, 0.6);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(90deg, #00ff88, #00cc66);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.5);
+        }
+
+        .btn:hover {
+            transform: translateY(-8px);
+        }
+
+        .or-text {
+            font-size: 1.4rem;
+            margin: 25px 0;
+            opacity: 0.8;
+        }
+
+        /* SECCIÓN DE SCRIPTS */
+        #script-section {
+            display: none;
+            position: relative;
+            z-index: 2;
+            margin: 50px auto;
+            padding: 40px;
+            max-width: 900px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(192, 132, 252, 0.3);
+        }
+
+        .script-card {
+            background: rgba(0, 0, 0, 0.3);
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(192, 132, 252, 0.2);
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="particles" id="particles"></div>
+
+    <div class="hero">
+        <h1>Zetanius Cheats</h1>
+        <p>La experiencia más elegante y avanzada en cheats</p>
+        
+        <a href="https://discord.gg/tymqNGBMD" target="_blank" class="btn btn-primary">
+            Scripts Aquí
+        </a>
+        
+        <div class="or-text">o</div>
+        
+        <button onclick="showScripts()" class="btn btn-secondary">
+            Desbloquear
+        </button>
+
+        <!-- Sección de Scripts -->
+        <div id="script-section">
+            <h2>Scripts Disponibles</h2>
+            
+            <div class="script-card">
+                <h3>Script Tower of Hell</h3>
+                <p>✅ Script cargado correctamente</p>
+                <a href="#" class="btn btn-primary" style="padding: 12px 30px; font-size: 1.1rem;">Descargar Script</a>
+            </div>
+
+            <div class="script-card">
+                <h3>Script Natural Disaster</h3>
+                <p>✅ Script cargado correctamente</p>
+                <a href="#" class="btn btn-primary" style="padding: 12px 30px; font-size: 1.1rem;">Descargar Script</a>
+            </div>
+
+            <div class="script-card">
+                <h3>Aimbot Universal</h3>
+                <p>✅ Script cargado correctamente</p>
+                <a href="#" class="btn btn-primary" style="padding: 12px 30px; font-size: 1.1rem;">Descargar Script</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Partículas
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 80; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                const size = Math.random() * 7 + 4;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.bottom = `-50px`;
+                
+                const duration = Math.random() * 18 + 22;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.animationDelay = `-${Math.random() * 30}s`;
+                particle.style.opacity = Math.random() * 0.7 + 0.4;
+                
+                container.appendChild(particle);
+            }
+        }
+
+        function showScripts() {
+            document.getElementById('script-section').style.display = 'block';
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+
+        window.onload = createParticles;
+    </script>
+</body>
+</html>
